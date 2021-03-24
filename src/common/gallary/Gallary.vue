@@ -5,9 +5,9 @@
       :options="swiperOption"
     >
       <!-- slides -->
-      <swiper-slide v-for="item of imgList" :key="item.id">
+      <swiper-slide v-for="(value,index) in imgList" :key="index" >
         <img class="swiper-img"
-             :src="item.imgUrl"/>
+             :src="value"/>
       </swiper-slide>
       <!-- Optional controls -->
       <div class="swiper-pagination"  slot="pagination"></div>

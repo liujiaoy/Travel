@@ -71,7 +71,7 @@ export default {
   methods: {
     handleCityClick (city) {
       this.cchangeCity(city)
-      this.$router.push('/')
+      // this.$router.push('/')
       this.keyword = ''
     },
     getCityInfo () {
@@ -113,13 +113,13 @@ export default {
       padding: .1rem
       ellipsis()
   .search-content
-    position:relative
+    position: absolute
     overflow: hidden
     z-index: 999
-    top: 0
+    top: .8rem
     right: 0
     left: 0
-    bottom: 0
+    bottom:0
     background: #eee
     .search-result
       font-size: .32rem
