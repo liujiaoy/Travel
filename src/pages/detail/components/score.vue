@@ -1,18 +1,20 @@
 <template>
   <div class="container">
-    <div class="score mp-item">
-      <div class="mp-item-left">
-        <div class="mp-yellow"><span class="mp-score-large">{{score}}</span>{{scoreText}}<span class="mp-score-dj">{{level}}</span></div>
-        <div class="mp-gray"><span class="mp-score-pl">{{commentNum}}</span><span class="mp-score-gl">{{raidersNum}}</span></div>
+    <div class="score sc-item">
+      <div class="sc-item-left">
+        <div class="sc-one sc-yellow"><span class="sc-score-large">{{this.scoreContent.score}}</span>分{{scoreContent.scoreText}}<span class="sc-score-dj">{{scoreContent.level}}</span></div>
+        <div class="sc-gray"><span class="sc-score-pl">{{scoreContent.commentNum}} 条评论</span><span class="sc-score-gl">{{scoreContent.raidersNum}}条攻略</span></div>
+        <div class="iconfont icon-go"><i class="iconarrow-right"></i></div>
       </div>
     </div>
-    <div class="mp-desc mp-item">
-      <div class="mp-item-right">
-        <div><span class="mp-desc-title">景点简介</span></div>
-        <div class="mp-gray"><span class="mp-desc-text">开放时间、贴士</span></div>
+    <div class="sc-desc sc-item">
+      <div class="sc-item-right">
+        <div class="sc-one"><span class="sc-desc-title">景点简介</span></div>
+        <div class="sc-gray"><span class="sc-desc-text">开放时间、贴士</span></div>
+        <div class="iconfont icon-go"><i class="iconarrow-right"></i></div>
       </div>
     </div>
-    <div class="addr">{{address}}</div>
+    <div class="addr">{{this.scoreContent.address}}</div>
   </div>
 </template>
 
@@ -21,16 +23,6 @@ export default {
   name: 'DetailScore',
   props: {
     scoreContent: Object
-  },
-  data () {
-    return {
-      score: this.scoreContent.score,
-      scoreText: '分',
-      level: this.scoreContent.level,
-      commentNum: this.scoreContent.commentNum + '条评论',
-      raidersNum: this.scoreContent.raidersNum + '条攻略',
-      address: this.scoreContent.address
-    }
   },
   mounted () {
     console.log(this.scoreContent)
@@ -44,21 +36,41 @@ export default {
     position: relative
     height: 2rem
     background: #fff
-    .mp-item
-      width: 49.1%
+    font-size:0
+    .sc-item
+      box-sizing: border-box
+      width: 50%
+      height: 1.16rem
       display:inline-block
-      .mp-item-right,.mp-item-left
-        padding: .16rem .16rem .1rem .16rem
-        border-right: .01rem solid #efefef
-        border-bottom: .01rem solid #efefef
-  .mp-yellow
+      position: relative
+      vertical-align:top
+      font-size:.30rem
+      padding: .16rem .16rem .1rem .16rem
+      border-right: .01rem solid #efffef
+      border-bottom: .01rem solid #efffef
+    .sc-one
+      height: .5rem
+      line-height: .5rem
+  .sc-yellow
     color: #ff8300
-  .mp-gray
+  .sc-gray
     color: #9e9e9e
-    font-size: .24rem
+    font-size: .2rem
     padding: .1rem 0
-  .mp-score-large
+  .sc-score-large
     font-size: .44rem
-  .mp-score-dj,.mp-score-gl
+  .sc-score-dj,.sc-score-gl
     padding-left: .2rem
+  .icon-go
+    position:absolute
+    right .1rem
+    top:50%
+    margin-top: -.12rem
+  .sc-desc-title
+    vertical-align:sub
+  .addr
+    padding: .16rem .16rem .1rem .16rem
+    border-right: .01rem solid #efffef
+    border-bottom: .01rem solid #efffef
+    font-size:.30rem
 </style>
