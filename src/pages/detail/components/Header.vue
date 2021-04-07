@@ -32,7 +32,6 @@ export default {
       } else {
         this.showHeader = false
       }
-      console.log(111)
     }
   },
   activated () {
@@ -47,6 +46,7 @@ export default {
 <style lang="stylus" scoped>
   .header-fix-back
     position: fixed
+    z-index: 2
     top: 0
     left: 0
     width: 100%

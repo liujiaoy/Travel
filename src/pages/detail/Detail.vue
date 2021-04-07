@@ -1,9 +1,10 @@
 <template>
-  <div>
+  <div class="detail-main">
     <detail-banner :bannerImg="bannerImg" :gallaryImgs="gallaryImgs" :sightName="sightName"></detail-banner>
-    <detail-score class="mp" :scoreContent="scoreContent"></detail-score>
+    <detail-score class="sc" :scoreContent="scoreContent"></detail-score>
     <detail-header></detail-header>
-    <detail-container></detail-container>
+    <detail-container :mpContent="mpContent"></detail-container>
+    <detail-comment></detail-comment>
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import DetailBanner from './components/Banner'
 import DetailHeader from './components/Header'
 import DetailScore from './components/Score'
 import DetailContainer from './components/Container'
+import DetailComment from './components/Comment'
 import axios from 'axios'
 export default {
   name: 'Detail',
@@ -19,14 +21,16 @@ export default {
     DetailBanner,
     DetailHeader,
     DetailScore,
-    DetailContainer
+    DetailContainer,
+    DetailComment
   },
   data () {
     return {
       bannerImg: '',
-      gallaryImgs: [],
       sightName: '',
-      scoreContent: {}
+      gallaryImgs: [],
+      scoreContent: {},
+      mpContent: []
     }
   },
   computed: {
@@ -46,11 +50,8 @@ export default {
         this.bannerImg = data.bannerImg
         this.gallaryImgs = data.gallaryImgs
         this.sightName = data.sightName
-        this.scoreContent.score = data.score
-        this.scoreContent.level = data.level
-        this.scoreContent.raidersNum = data.raidersNum
-        this.scoreContent.commentNum = data.commentNum
-        this.scoreContent.address = data.address
+        this.scoreContent = data
+        this.mpContent = data.categoryList
       }
     }
   },
@@ -61,7 +62,9 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-  .mp
+.detail-main
+  background-color : #f5f5f5
+  .sc
     border-radius : .1rem
     margin-top: -0.1rem
 </style>

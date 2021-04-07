@@ -6,6 +6,34 @@
   "description": "Travel 项目图标",
   "glyphs": [
     {
+      "icon_id": "6294138",
+      "name": "五星",
+      "font_class": "wuxing",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    },
+    {
+      "icon_id": "16607512",
+      "name": "五星",
+      "font_class": "wuxing1",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "20186885",
+      "name": "地址",
+      "font_class": "dizhi",
+      "unicode": "e63d",
+      "unicode_decimal": 58941
+    },
+    {
+      "icon_id": "13666219",
+      "name": "门票 票 线性",
+      "font_class": "menpiaopiaoxianxing",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
       "icon_id": "13242890",
       "name": "#icon-fanhui",
       "font_class": "arrow-right",
@@ -71,7 +99,7 @@
     {
       "icon_id": "7140576",
       "name": "学校",
-      "font_class": "xuexiao1",
+      "font_class": "xueli",
       "unicode": "e643",
       "unicode_decimal": 58947
     },

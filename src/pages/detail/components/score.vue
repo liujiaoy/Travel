@@ -14,7 +14,7 @@
         <div class="iconfont icon-go"><i class="iconarrow-right"></i></div>
       </div>
     </div>
-    <div class="addr">{{this.scoreContent.address}}</div>
+    <div class="addr"><i class="iconfont">&#xe63d;</i>{{this.scoreContent.address}}</div>
   </div>
 </template>
 
@@ -25,12 +25,13 @@ export default {
     scoreContent: Object
   },
   mounted () {
-    console.log(this.scoreContent)
+    // console.log(this.scoreContent)
   }
 }
 </script>
 
 <style lang="stylus" scoped>
+@import '~styles/varibles.styl';
   .container
     box-sizing: border-box
     position: relative
@@ -52,7 +53,7 @@ export default {
       height: .5rem
       line-height: .5rem
   .sc-yellow
-    color: #ff8300
+    color: $yellowFont
   .sc-gray
     color: #9e9e9e
     font-size: .2rem

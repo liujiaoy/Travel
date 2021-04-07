@@ -4,3 +4,17 @@
   white-space: nowrap
   // 如何处理文本溢出(ellipsis 省略号)
   text-overflow: ellipsis
+
+ wrap_ellipsis()
+  overflow: hidden
+  // 如何处理换行
+  white-space: normal
+  word-break: break-all
+  /* 盒子模型 */
+  display: -webkit-box;
+  /* 显示的文本行数 */
+  -webkit-line-clamp: 3;
+  /* 子元素的垂直排列方式 */
+  -webkit-box-orient: vertical;
+  // 如何处理文本溢出(ellipsis 省略号)
+  text-overflow: ellipsis
