@@ -56,11 +56,12 @@ module.exports = {
     assetsPublicPath: './',
     proxyTable: {
       '/api': {
-        target: 'http://travel.better2020.top',
+        target: 'http://travel.better2020.top/dist',
         changeOrigin: true,
         pathRewrite: {
-          '^/api': '/mock'
-        }
+          '^/api': '/static/mock'
+        },
+        
       }
     },
     /**
