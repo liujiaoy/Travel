@@ -1,19 +1,23 @@
 <template>
   <div class="container">
-    <div class="score sc-item">
-      <div class="sc-item-left">
-        <div class="sc-one sc-yellow"><span class="sc-score-large">{{this.scoreContent.score}}</span>分{{scoreContent.scoreText}}<span class="sc-score-dj">{{scoreContent.level}}</span></div>
-        <div class="sc-gray"><span class="sc-score-pl">{{scoreContent.commentNum}} 条评论</span><span class="sc-score-gl">{{scoreContent.raidersNum}}条攻略</span></div>
-        <div class="iconfont icon-go"><i class="iconarrow-right"></i></div>
+    <router-link to="/waiting">
+      <div class="score sc-item">
+        <div class="sc-item-left">
+          <div class="sc-one sc-yellow"><span class="sc-score-large">{{this.scoreContent.score}}</span>分{{scoreContent.scoreText}}<span class="sc-score-dj">{{scoreContent.level}}</span></div>
+          <div class="sc-gray"><span class="sc-score-pl">{{scoreContent.commentNum}} 条评论</span><span class="sc-score-gl">{{scoreContent.raidersNum}}条攻略</span></div>
+          <div class="iconfont icon-go"><i class="iconarrow-right"></i></div>
+        </div>
       </div>
-    </div>
-    <div class="sc-desc sc-item">
-      <div class="sc-item-right">
-        <div class="sc-one"><span class="sc-desc-title">景点简介</span></div>
-        <div class="sc-gray"><span class="sc-desc-text">开放时间、贴士</span></div>
-        <div class="iconfont icon-go"><i class="iconarrow-right"></i></div>
+    </router-link>
+    <router-link to="/waiting">
+      <div class="sc-desc sc-item">
+        <div class="sc-item-right">
+          <div class="sc-one"><span class="sc-desc-title">景点简介</span></div>
+          <div class="sc-gray"><span class="sc-desc-text">开放时间、贴士</span></div>
+          <div class="iconfont icon-go"><i class="iconarrow-right"></i></div>
+        </div>
       </div>
-    </div>
+    </router-link>
     <div class="addr"><i class="iconfont">&#xe63d;</i>{{this.scoreContent.address}}</div>
   </div>
 </template>

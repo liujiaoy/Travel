@@ -7,16 +7,18 @@
         v-for="item of weekendList"
         :key="item.id"
       >
-        <div class="item-img">
-          <img
-            class="img-content"
-            :src="item.imgUrl"
-          />
-        </div>
-        <div class="item-info">
-          <p class="item-info-title">{{item.title}}</p>
-          <p class="item-info-desc">{{item.desc}}</p>
-        </div>
+        <router-link :to="'/detail/' + item.id">
+          <div class="item-img">
+            <img
+              class="img-content"
+              :src="item.imgUrl"
+            />
+          </div>
+          <div class="item-info">
+            <p class="item-info-title">{{item.title}}</p>
+            <p class="item-info-desc">{{item.desc}}</p>
+          </div>
+        </router-link>
       </li>
     </ul>
   </div>

@@ -1,6 +1,7 @@
 <template>
   <div class="container" @click="handleClickBack">
     <swiper
+      ref="mySwiper"
       class="swiper-content"
       :options="swiperOption"
     >
@@ -19,13 +20,15 @@
 export default {
   name: 'CommonGallary',
   props: {
-    imgList: Array
+    imgList: Array,
+    clickIndex: Number
   },
   data () {
     return {
       swiperOption: {
         pagination: '.swiper-pagination',
         paginationType: 'fraction',
+        initialSlide: this.clickIndex || 0,
         observeParents: true,
         observer: true
       },
@@ -50,7 +53,7 @@ export default {
     bottom: 0
     left: 0
     background: #000
-    z-index: 2
+    z-index: 99
     display: flex
     flex-direction: column
     justify-content: center
