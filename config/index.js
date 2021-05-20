@@ -59,7 +59,7 @@ module.exports = {
         target: 'http://travel.better2020.top',
         changeOrigin: true,
         pathRewrite: {
-          '^/api': '/static/mock'
+          '^/api': '/mock'
         }
       }
     },
