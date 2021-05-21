@@ -54,15 +54,6 @@ module.exports = {
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
     assetsPublicPath: './',
-    proxyTable: {
-      '/api': {
-        target: 'http://ddhanjiangxue.gitee.io/dist',
-        changeOrigin: true,
-        pathRewrite: {
-          '^/api': '/static/mock'
-        }
-      }
-    },
     /**
      * Source Maps
      */
