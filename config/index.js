@@ -56,12 +56,11 @@ module.exports = {
     assetsPublicPath: './',
     proxyTable: {
       '/api': {
-        target: 'http://travel.better2020.top',
+        target: 'http://ddhanjiangxue.gitee.io/dist',
         changeOrigin: true,
         pathRewrite: {
-          '^/api': '/dist/static/mock'
-        },
-        
+          '^/api': '/static/mock'
+        }
       }
     },
     /**
