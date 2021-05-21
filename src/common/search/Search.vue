@@ -75,7 +75,7 @@ export default {
       this.keyword = ''
     },
     getCityInfo () {
-      axios.get('/api/city.json')
+      axios.get(this.baseURL + '/city.json')
         .then(this.getCityInfoSucc)
     },
     getCityInfoSucc (res) {

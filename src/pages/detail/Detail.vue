@@ -40,7 +40,7 @@ export default {
   },
   methods: {
     getDetailInfo () {
-      axios.get('/api/detail.json')
+      axios.get(this.baseURL + '/detail.json')
         .then(this.getDetailInfoSucc)
     },
     getDetailInfoSucc (res) {

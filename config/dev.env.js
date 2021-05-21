@@ -4,5 +4,5 @@ const prodEnv = require('./prod.env')
 
 module.exports = merge(prodEnv, {
   NODE_ENV: '"development"',
-  API_ROOT: '"//127.0.0.1/api"' //接口路径
+  API_ROOT: '"/api"' //接口路径
 })

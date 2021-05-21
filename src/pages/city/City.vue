@@ -36,7 +36,6 @@ export default {
   },
   methods: {
     getCityInfo () {
-      alert()
       axios.get(this.baseURL + '/city.json')
         .then(this.getCityInfoSucc)
     },
