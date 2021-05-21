@@ -36,6 +36,8 @@ export default {
   },
   methods: {
     getCityInfo () {
+      let url = 'api/'
+      console.log(url)
       axios.get('/api/city.json')
         .then(this.getCityInfoSucc)
     },
