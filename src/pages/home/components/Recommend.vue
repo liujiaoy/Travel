@@ -64,14 +64,12 @@ export default {
         margin-bottom: .2rem
         padding-right: .2rem
         font-size: .36rem
-        wrap_ellipsis()
-        ellipsis()
+        wrap_ellipsis(1)
       .item-info-desc
         color: $darkGray
         // width: 100%
         padding-right: .2rem
-        wrap_ellipsis()
-        ellipsis()
+        wrap_ellipsis(1)
       .item-button
         margin-top: .2rem
         padding-top: .03rem

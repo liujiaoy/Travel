@@ -162,7 +162,7 @@ export default {
       font-size: .2rem
     .item-content
       width: 100%
-      wrap_ellipsis()
+      wrap_ellipsis(3)
       margin: .1rem 0
     .item-img .img
       display: inline-block
