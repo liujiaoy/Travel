@@ -59,6 +59,9 @@ export default {
     justify-content: center
     .swiper-content
       width: 100%
+      .swiper-slide
+        display: flex
+        align-items: center
       .swiper-img
         width: 100%
     .swiper-pagination
