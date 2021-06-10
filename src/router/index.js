@@ -4,6 +4,9 @@ import Home from '@/pages/home/Home.vue'
 import City from '@/pages/city/City.vue'
 import Detail from '@/pages/detail/Detail.vue'
 import Waiting from '@/pages/waiting/Waiting.vue'
+const Orders = () => import('@/pages/orders/Orders')
+const Raiders = () => import('@/pages/raiders/Raiders')
+const Profile = () => import('@/pages/profile/Profile')
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -26,6 +29,21 @@ export default new Router({
       path: '/waiting',
       name: 'Waiting',
       component: Waiting
+    },
+    {
+      path: '/orders',
+      name: 'Orders',
+      component: Orders
+    },
+    {
+      path: '/raiders',
+      name: 'Raiders',
+      component: Raiders
+    },
+    {
+      path: '/profile',
+      name: 'Profile',
+      component: Profile
     }
   ]
 })

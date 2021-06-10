@@ -126,8 +126,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import '~styles/mixins.styl'
-@import '~styles/varibles.styl'
   .detail-comment
     margin-top: .2rem
     background-color: #fff

@@ -27,7 +27,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-  @import '~styles/varibles.styl'
   .header
     .header-right
       transform: translateY(50%);

@@ -1,0 +1,2 @@
+webpackJsonp([2],{HkIW:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var r={render:function(){var e=this.$createElement;return(this._self._c||e)("div",[this._v("我的")])},staticRenderFns:[]};var i=n("VU/8")({name:"Profile",data:function(){return{}},methods:{},mounted:function(){}},r,!1,function(e){n("jJYy")},"data-v-15790df0",null);t.default=i.exports},jJYy:function(e,t){}});
+//# sourceMappingURL=2.4684cbb389f15a4688e0.js.map

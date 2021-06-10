@@ -1,26 +1,27 @@
 <template>
   <div id="tab-bar">
-      <div class="tab-bar-item">首页</div>
-      <div class="tab-bar-item">分类</div>
-      <div class="tab-bar-item">购物车</div>
-      <div class="tab-bar-item">我的</div>
+    <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
-    name: "TabBar"
+  name: 'TabBar'
 }
 </script>
 
-<style>
-#tab-bar{
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-.tab-bar-item{
-    flex: auto;
-}
+<style lang="stylus" scoped>
+#tab-bar
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex
+  display: -webkit-flex
+  background-color: $tabbarBackcolor
+  height: 49px
+  flex-flow: row nowrap
+  justify-content:  space-between
+  align-items: center
+  z-index: 2
 </style>

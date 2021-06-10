@@ -1,0 +1,2 @@
+webpackJsonp([1],{"2ph+":function(e,n){},"3e44":function(e,n,t){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var r={render:function(){var e=this.$createElement;return(this._self._c||e)("div",[this._v("\n  您没有订单哦\n")])},staticRenderFns:[]};var s=t("VU/8")({name:"Orders"},r,!1,function(e){t("2ph+")},null,null);n.default=s.exports}});
+//# sourceMappingURL=1.38f892eb0cf7cb6c35d0.js.map
