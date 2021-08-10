@@ -14,6 +14,7 @@ import HomeIcons from './components/Icons'
 import HomeRecommend from './components/Recommend'
 import HomeWeekend from './components/Weekend'
 import axios from 'axios'
+import {getHomeData} from '../../network/home'
 import { mapState } from 'vuex'
 export default {
   name: 'Home',
@@ -39,7 +40,13 @@ export default {
     })
   },
   methods: {
+    //测试axios的封装
+    // getHomeInfo(){
+    //   getHomeData()
+    //   .then(this.getHomeInfoSucc)
+    // },
     getHomeInfo () {
+      // console.log(this.baseURL)
       axios.get(this.baseURL + '/index.json?city=' + this.city)
         .then(this.getHomeInfoSucc)
     },
@@ -52,7 +59,7 @@ export default {
         this.recommendList = data.recommendList
         this.weekendList = data.weekendList
       }
-      console.log(res)
+      // console.log(res)
     }
   },
   mounted () {

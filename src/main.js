@@ -6,10 +6,14 @@ import router from './router'
 import fastClick from 'fastClick'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import store from './store'
+import { request } from './network/request'
 import 'styles/reset.css'
 import 'styles/border.css'
 import 'styles/iconfont.css'
 import 'swiper/dist/css/swiper.css'
+
+require('./mock/index')
+
 
 Vue.config.productionTip = false
 fastClick.attach(document.body)

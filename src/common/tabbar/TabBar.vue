@@ -1,7 +1,10 @@
 <template>
-  <div id="tab-bar">
-    <slot></slot>
+  <div class="tabbardiv">
+    <div id="tab-bar">
+      <slot></slot>
+    </div>
   </div>
+  
 </template>
 
 <script>
@@ -24,4 +27,7 @@ export default {
   justify-content:  space-between
   align-items: center
   z-index: 2
+.tabbardiv
+  height: 49px
+
 </style>

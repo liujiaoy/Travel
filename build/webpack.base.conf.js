@@ -38,6 +38,8 @@ module.exports = {
       '@': resolve('src'),
       'styles': resolve('src/assets/styles'),
       'img': resolve('src/assets/img'),
+      'commom': resolve('src/commom'),
+      'pages': resolve('src/pages'),
       'api': resolve('static/mock')
     }
   },

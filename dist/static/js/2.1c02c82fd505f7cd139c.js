@@ -1,0 +1,2 @@
+webpackJsonp([2],{"3e44":function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var r={components:{NavBar:n("EdT2").a},name:"Orders"},s={render:function(){var e=this.$createElement,t=this._self._c||e;return t("div",[t("nav-bar",[t("div",{attrs:{slot:"center"},slot:"center"},[this._v("订单中心")])])],1)},staticRenderFns:[]};var a=n("VU/8")(r,s,!1,function(e){n("7YUw")},null,null);t.default=a.exports},"7YUw":function(e,t){}});
+//# sourceMappingURL=2.1c02c82fd505f7cd139c.js.map

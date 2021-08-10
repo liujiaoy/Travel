@@ -118,7 +118,7 @@ export default {
       this.clickIndex = index
     },
     getCityId () {
-      console.log(this.$route.params.id)
+      // console.log(this.$route.params.id)
       return this.$route.params.id
     }
   }
