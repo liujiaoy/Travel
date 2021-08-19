@@ -2,13 +2,11 @@
   <div>
     <div class="box" ref="box">
       <div class="col" :style="colwidth" v-for="(itemdata,name,index) in dataList" :key=index  ref="col">
-        <transition-group name="list">
-          <div class="item border-right border-bottom" v-for="item of itemdata" :key="item.id" >
-            <img src="../../../assets/img/1.jpg" :data-src="item.imgUrl"  ref="img" >
-            <div class="title">{{item.title}}</div>
-            <slot></slot>
-          </div>
-        </transition-group>
+        <div class="item border-right border-bottom" v-for="item of itemdata" :key="item.id" >
+          <img src="../../../assets/img/1.jpg" :data-src="item.imgUrl"  ref="img" >
+          <div class="title">{{item.title}}</div>
+          <slot></slot>
+        </div>
       </div>
     </div>
   </div>
@@ -78,6 +76,7 @@ export default {
           newimg.src = this.mainMenuList[index].imgUrl;
 
           // newimg.width = img.offsetWidth;
+          //获取图片高度
           newimg.onload = function(){
             // console.log(_this.dataList)
             // console.log(newimg.width)
@@ -128,17 +127,20 @@ export default {
         // this.lazyloadimg(index+1)
       }
     },
+    //将dom挂载到Vue实例，不然后续插入元素页面不会改变
     initdataList(){
       for(let i = 0;i<this.col;i++){
         this.$set(this.dataList,i,[])
         // this.dataList[i]=[];
       }
     },
+    //监听页面滚动，防抖
     listenScroll(){
       // console.log("scroll")
       clearTimeout(this.scrolltime);
       this.scrolltime = setTimeout(this.handleScroll,200);
     },
+    //处理页面滚动
     handleScroll(){
       // console.log(111)
       let length = 0;

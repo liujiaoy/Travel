@@ -15,24 +15,23 @@
 <script>
 import NavBar from '../../common/navbar/NavBar.vue'
 import {testMockData} from '../../network/profile.js'
-import Waterfall from './components/waterfall.vue'
+import Waterfall from './components/Waterfall'
 export default {
   name: 'Profile',
   components: {
     NavBar,
-    Waterfall
+    Waterfall,
   },
   data() {
     return{
       mainMenuList: [] ,
-      col:2
+      col:5
     }
   },
   mounted() {
     // var _this = this;
     testMockData().then( res =>{
       this.mainMenuList = res.data
-      debugger
       this.$nextTick(()=>{
         this.$refs.waterfall.mountMenu();
       })
