@@ -3,7 +3,7 @@
     <div class="box" ref="box">
       <div class="col" :style="colwidth" v-for="(itemdata,name,index) in dataList" :key=index  ref="col">
         <div class="item border-right border-bottom" v-for="item of itemdata" :key="item.id" >
-          <img src="../../../assets/img/1.jpg" :data-src="item.imgUrl"  ref="img" >
+          <img src="../../../assets/img/imgerror.jpeg" :data-src="item.imgUrl"  ref="img" >
           <div class="title">{{item.title}}</div>
           <slot></slot>
         </div>
@@ -74,16 +74,21 @@ export default {
           // console.log(img.offsetWidth)
           let newimg = new Image();
           newimg.src = this.mainMenuList[index].imgUrl;
-
+          let img = _this.$refs.img[index];
           // newimg.width = img.offsetWidth;
           //获取图片高度
+          newimg.onerror = ()=>{
+            img.dataset.src = img.src;
+            _this.lazyloadimg(index);  
+            _this.mountMenu(index + 1);
+          }
           newimg.onload = function(){
             // console.log(_this.dataList)
             // console.log(newimg.width)
             // console.log(newimg.height) 
             let scale = newimg.height/newimg.width;
             // console.log(scale)
-            let img = _this.$refs.img[index];
+            
             // let item = img.parentNode        
             // console.log(img.width)
             img.height=img.width*scale;
@@ -104,7 +109,7 @@ export default {
       for (let index = 0; index<this.col; index++) {
         let item = cols[index];
         let itemheight = item.offsetHeight;
-        if(lowheight >= itemheight){
+        if(itemheight < lowheight){
           lowheight = itemheight;
           lowcol = index;
         }

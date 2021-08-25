@@ -28,6 +28,11 @@ export default {
       col:5
     }
   },
+  beforeMount(){
+    if(document.body.clientWidth < 750){
+      this.col = 2;
+    }
+  },
   mounted() {
     // var _this = this;
     testMockData().then( res =>{
