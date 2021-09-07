@@ -166,7 +166,7 @@ export default {
       display: inline-block
       box-sizing: border-box
       padding: 0 .1rem .1rem 0
-      width: 25%
+      width: 2rem
       height: 2rem
       overflow: hidden
       img

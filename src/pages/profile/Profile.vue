@@ -8,19 +8,33 @@
       :col="col"
       ref="waterfall"
     >
-    <!-- <div class="title">{{item.title}}</div> -->
     </waterfall>
+
+      <!-- <van-image
+        width="300"
+        lazy-load
+        v-for="item of mainMenuList" 
+        :key="item.id"
+        :src=item.imgUrl
+      /> -->
+   
   </div>
 </template>
 <script>
 import NavBar from '../../common/navbar/NavBar.vue'
 import {testMockData} from '../../network/profile.js'
 import Waterfall from './components/Waterfall'
+import { Image as VanImage } from 'vant'
+import { Lazyload } from 'vant'
+import Vue from 'vue'
+Vue.use(Lazyload)
 export default {
   name: 'Profile',
   components: {
     NavBar,
     Waterfall,
+    Lazyload,
+    VanImage
   },
   data() {
     return{
@@ -40,8 +54,6 @@ export default {
       this.$nextTick(()=>{
         this.$refs.waterfall.mountMenu();
       })
-      
-      // this.mountMenu()
     })
      
   },

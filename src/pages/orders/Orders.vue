@@ -3,13 +3,15 @@
     <nav-bar>
       <div slot="center">订单中心</div>
     </nav-bar>
+    <lifecycle></lifecycle>
   </div>
 </template>
 
 <script>
 import NavBar from '../../common/navbar/NavBar.vue'
+import Lifecycle from './components/lifecycle.vue';
 export default {
-  components: { NavBar },
+  components: { NavBar, Lifecycle },
   name: 'Orders',
   data (){
     return {
