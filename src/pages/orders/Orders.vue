@@ -3,19 +3,26 @@
     <nav-bar>
       <div slot="center">订单中心</div>
     </nav-bar>
-    <lifecycle></lifecycle>
+    <!-- <lifecycle></lifecycle> -->
+    <model-input 
+      :value = "searchText"
+      @input="dosomething"
+    ></model-input>
+    <div>{{searchText}}</div>
   </div>
 </template>
 
 <script>
-import NavBar from '../../common/navbar/NavBar.vue'
+import NavBar from '../../common/navbar/NavBar.vue';
 import Lifecycle from './components/lifecycle.vue';
+import ModelInput from './components/modelInput.vue';
 export default {
-  components: { NavBar, Lifecycle },
+  components: { NavBar, Lifecycle, ModelInput },
   name: 'Orders',
   data (){
     return {
-      newArr:[]
+      newArr:[],
+      searchText:""
     }
   },
   mounted () {
@@ -30,6 +37,10 @@ export default {
     this.testdeepclone();
   },
   methods: {
+    dosomething(data){
+      console.log(data);
+      this.searchText = data;
+    },
     //第 1 题：写一个 mySetInterVal(fn, a, b),每次间隔 a,a+b,a+2b,...,a+nb 的时间，然后写一个 myClear，停止上面的 mySetInterVal 
     mySetInterVal(fn, a, b){
       let index = 0;//第几次调用

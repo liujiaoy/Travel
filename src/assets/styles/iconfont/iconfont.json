@@ -6,6 +6,27 @@
   "description": "Travel 项目图标",
   "glyphs": [
     {
+      "icon_id": "6185356",
+      "name": "热门",
+      "font_class": "remen",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "20574624",
+      "name": "爱心",
+      "font_class": "aixin",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "15372",
+      "name": "图片",
+      "font_class": "tupian",
+      "unicode": "e647",
+      "unicode_decimal": 58951
+    },
+    {
       "icon_id": "5913436",
       "name": "我的",
       "font_class": "wode",
@@ -67,83 +88,6 @@
       "font_class": "arrow-right",
       "unicode": "e628",
       "unicode_decimal": 58920
-    },
-    {
-      "icon_id": "5044527",
-      "name": "风铃",
-      "font_class": "fengling",
-      "unicode": "e601",
-      "unicode_decimal": 58881
-    },
-    {
-      "icon_id": "7561097",
-      "name": "花",
-      "font_class": "flower",
-      "unicode": "e66b",
-      "unicode_decimal": 58987
-    },
-    {
-      "icon_id": "10206",
-      "name": "码",
-      "font_class": "ma",
-      "unicode": "e600",
-      "unicode_decimal": 58880
-    },
-    {
-      "icon_id": "1643514",
-      "name": "个人信息_宝贝姓名",
-      "font_class": "gerenxinxi_baobeixingming",
-      "unicode": "e69b",
-      "unicode_decimal": 59035
-    },
-    {
-      "icon_id": "1268559",
-      "name": "邮箱",
-      "font_class": "13",
-      "unicode": "e629",
-      "unicode_decimal": 58921
-    },
-    {
-      "icon_id": "2596819",
-      "name": "学校",
-      "font_class": "xuexiao",
-      "unicode": "e775",
-      "unicode_decimal": 59253
-    },
-    {
-      "icon_id": "3893828",
-      "name": "籍贯",
-      "font_class": "jiguan",
-      "unicode": "e616",
-      "unicode_decimal": 58902
-    },
-    {
-      "icon_id": "6331588",
-      "name": "电话",
-      "font_class": "dianhua",
-      "unicode": "e62c",
-      "unicode_decimal": 58924
-    },
-    {
-      "icon_id": "7140576",
-      "name": "学校",
-      "font_class": "xueli",
-      "unicode": "e643",
-      "unicode_decimal": 58947
-    },
-    {
-      "icon_id": "8139741",
-      "name": "生日蛋糕",
-      "font_class": "Desert-",
-      "unicode": "e62e",
-      "unicode_decimal": 58926
-    },
-    {
-      "icon_id": "15372",
-      "name": "图片",
-      "font_class": "tupian",
-      "unicode": "e647",
-      "unicode_decimal": 58951
     },
     {
       "icon_id": "2674472",

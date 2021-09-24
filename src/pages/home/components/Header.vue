@@ -1,5 +1,6 @@
 <template>
   <div class="header">
+    <!-- 搜索栏组件 -->
     <city-search class="header-input">
       <router-link to="/city">
         <div class="header-right">
@@ -21,7 +22,12 @@ export default {
     CitySearch
   },
   computed: {
-    ...mapState(['city'])
+    // 写法一
+    city(){
+      return this.$store.state.city
+    }
+    //写法二
+    // ...mapState(['city']) //语法糖
   }
 }
 </script>

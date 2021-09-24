@@ -88,7 +88,7 @@ export default {
     position: absolute
     top: 1.68rem
     left: 0
-    // right: 0
+    right: 0
     bottom: 0
     .area
       .title
@@ -99,9 +99,9 @@ export default {
       .border-bottom
         border-color: #000
       .content
-        height: 2.0rem
-        padding-right: .86rem
-        overflow: hidden
+        // height: 2.0rem
+        // padding-right: .86rem
+        overflow: auto
         .button
           float: left
           width: 1.92rem
@@ -111,8 +111,8 @@ export default {
           font-size: .34rem
           border-radius: .06rem
           background: #fff
-          margin-top: .2rem
-          margin-left: .2rem
+          margin: .1rem
+          // margin-left: .2rem
           padding-top: .1rem
           padding-bottom: .04rem
           text-align: center

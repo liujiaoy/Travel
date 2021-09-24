@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- 输入框 -->
     <div class="search">
       <input
         class="search-input"
@@ -9,6 +10,7 @@
       />
       <slot></slot>
     </div>
+    <!-- 搜索结果 -->
     <div
       v-show="keyword"
       class="search-content"
@@ -57,6 +59,7 @@ export default {
       }
       this.timer = setTimeout(() => {
         const result = []
+        // console.log(this.cities);
         for (let i in this.cities) {
           this.cities[i].forEach((value) => {
             if (value.spell.indexOf(this.keyword) > -1 || value.name.indexOf(this.keyword) > -1) {
@@ -85,10 +88,14 @@ export default {
         this.cities = data.cities
       }
     },
+    //将this.$store.commit('cchangeCity')映射成this.cchangeCity(city)
     ...mapMutations(['cchangeCity'])
   },
-  mounted () {
+  created (){
     this.getCityInfo()
+  },
+  //这里不能用created代替，$refs需要等到页面加载完成才能获取到
+  mounted () {
     this.scroll = new Bscroll(this.$refs.search, {
       click: true
     })

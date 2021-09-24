@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 1497385 */
-  src: url('iconfont/iconfont.woff2?t=1623315313667') format('woff2'),
-       url('iconfont/iconfont.woff?t=1623315313667') format('woff'),
-       url('iconfont/iconfont.ttf?t=1623315313667') format('truetype');
+  src: url('iconfont/iconfont.woff2?t=1631928567946') format('woff2'),
+       url('iconfont/iconfont.woff?t=1631928567946') format('woff'),
+       url('iconfont/iconfont.ttf?t=1631928567946') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,18 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.iconremen:before {
+  content: "\e608";
+}
+
+.iconaixin:before {
+  content: "\e609";
+}
+
+.icontupian:before {
+  content: "\e647";
 }
 
 .iconwode:before {
@@ -47,50 +59,6 @@
 
 .iconarrow-right:before {
   content: "\e628";
-}
-
-.iconfengling:before {
-  content: "\e601";
-}
-
-.iconflower:before {
-  content: "\e66b";
-}
-
-.iconma:before {
-  content: "\e600";
-}
-
-.icongerenxinxi_baobeixingming:before {
-  content: "\e69b";
-}
-
-.icon13:before {
-  content: "\e629";
-}
-
-.iconxuexiao:before {
-  content: "\e775";
-}
-
-.iconjiguan:before {
-  content: "\e616";
-}
-
-.icondianhua:before {
-  content: "\e62c";
-}
-
-.iconxueli:before {
-  content: "\e643";
-}
-
-.iconDesert-:before {
-  content: "\e62e";
-}
-
-.icontupian:before {
-  content: "\e647";
 }
 
 .iconfanhui:before {

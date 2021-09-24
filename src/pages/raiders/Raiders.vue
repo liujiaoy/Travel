@@ -7,6 +7,7 @@
 </template>
 <script>
 import NavBar from '../../common/navbar/NavBar.vue'
+import { getData } from '../../api/test'
 export default {
   components: { NavBar },
   name: 'Raiders',
@@ -15,8 +16,14 @@ export default {
     }
   },
   methods: {
+     getMock () {
+      getData().then(res => {
+        console.log(res.data)
+      })
+    }
   },
   mounted () {
+    this.getMock()
   }
 }
 </script>

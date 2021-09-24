@@ -7,6 +7,7 @@ import Waiting from '@/pages/waiting/Waiting.vue'
 const Orders = () => import('@/pages/orders/Orders')
 const Raiders = () => import('@/pages/raiders/Raiders')
 const Profile = () => import('@/pages/profile/Profile')
+const HotList = () => import('@/pages/hotlist/HotList')
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -14,6 +15,11 @@ export default new Router({
       path: '/',
       name: 'Home',
       component: Home
+    },
+    {
+      path: '/hotlist',
+      name: 'HotList',
+      component: HotList
     },
     {
       path: '/city',

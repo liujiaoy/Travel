@@ -8,17 +8,19 @@
         <span class="iconfont">&#xe647;</span>{{gallaryImgs.length}}
       </div>
     </div>
-    <router-link to="/">
+    <back-in-circle></back-in-circle>
+    <!-- <router-link to="/">
       <div class="header-left">
         <div class="iconfont">&#xe624;</div>
       </div>
-    </router-link>
+    </router-link> -->
     <common-gallary :imgList="gallaryImgs" v-show="showGallary" @close="handleClickOut"></common-gallary>
   </div>
 </template>
 
 <script>
 import CommonGallary from '@/common/gallary/Gallary'
+import BackInCircle from '../../../common/goback/BackInCircle.vue'
 export default {
   name: 'DetailBanner',
   props: {
@@ -27,7 +29,8 @@ export default {
     sightName: String
   },
   components: {
-    CommonGallary
+    CommonGallary,
+    BackInCircle
   },
   data () {
     return {

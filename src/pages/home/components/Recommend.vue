@@ -1,6 +1,5 @@
 <template>
   <div>
-    <div class="title">热销推荐</div>
     <ul>
       <router-link tag="li"
         class="item border-bottom"

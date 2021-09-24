@@ -49,16 +49,17 @@ export default {
         if (this.timer) {
           clearTimeout(this.timer)
         }
+        const cityListY = this.$refs['A'][0].offsetHeight
         this.timer = setTimeout(() => {
           const touchY = e.touches[0].clientY - 84
-          const index = Math.floor((touchY - this.startY) / 20)
+          const index = Math.floor((touchY - this.startY) / cityListY)
           if (index >= 0 && index < this.letters.length) {
             this.$emit('change', this.letters[index])
           }
         }, 15)
       }
     },
-    handleTouchEnd () {
+    handleTouchEnd (e) {
       this.touchStatus = false
     }
   },
@@ -75,12 +76,12 @@ export default {
     justify-content: center
     position: absolute
     top: 1.68rem
-    right: .02rem
+    right: 0
     bottom: 0
-    width: .4rem
+    width: .6rem
     text-align: center
-    font-size: .28rem
+    font-size: .2vh
     .cityList
-      line-height: .4rem
+      line-height: 2.5vh
       color: #0077AA
 </style>
