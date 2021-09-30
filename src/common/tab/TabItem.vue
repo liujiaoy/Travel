@@ -1,34 +1,38 @@
 <template>
-  <ul class="tab border-bottom" >
-    <!-- <div class="item-icon-active" v-show="isActive"><slot name="item-icon-active"></slot></div> -->
-    <li 
-      v-for="(item,index) of tabtxt" 
-      :key="index" 
-      :class="{'tab-item-active':index==currentTab}"  
-      @click="itemClick(index)"
-      :data-index="index"
-    >
-    {{item}}
-    </li>
-  </ul>
+<ul class="tab border-bottom" >
+  <!-- <div class="item-icon-active" v-show="isActive"><slot name="item-icon-active"></slot></div> -->
+  <li 
+    v-for="(item,index) of tabtxt" 
+    :key="index" 
+    :class="{'tab-item-active':index==cTab}"  
+    @click="itemClick(index)"
+    :data-index="index"
+  >
+  {{item}}
+  </li>
+</ul>
 </template>
 <script>
 export default {
   name:'',
   props:{
-    tabtxt:Array
+    tabtxt:Array,
+    currentTab:{
+      type:Number,
+      default:0
+    }
   },
 
   data () {
     return {
-      currentTab:0
+      cTab:this.currentTab||0
     }
   },
   methods: {
     itemClick(index){
       // console.log(index);
-      this.currentTab = index;
-      this.$emit('scrollToView',index)
+      this.cTab = index;
+      this.$emit('scrollToView',this.cTab)
     }
   },
   mounted () {

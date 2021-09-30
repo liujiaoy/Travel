@@ -1,8 +1,9 @@
 <template>
   <div class="detail-main">
+    <fade title="景点详情"></fade>
     <detail-banner :bannerImg="bannerImg" :gallaryImgs="gallaryImgs" :sightName="sightName"></detail-banner>
     <detail-score class="sc" :scoreContent="scoreContent"></detail-score>
-    <detail-header></detail-header>
+    <!-- <detail-header></detail-header> -->
     <detail-container :mpContent="mpContent"></detail-container>
     <detail-comment></detail-comment>
   </div>
@@ -15,6 +16,7 @@ import DetailScore from './components/Score'
 import DetailContainer from './components/Container'
 import DetailComment from './components/Comment'
 import axios from 'axios'
+import Fade from '../../common/fade/Fade.vue'
 export default {
   name: 'Detail',
   components: {
@@ -22,7 +24,8 @@ export default {
     DetailHeader,
     DetailScore,
     DetailContainer,
-    DetailComment
+    DetailComment,
+    Fade
   },
   data () {
     return {

@@ -1,31 +1,36 @@
 <template>
   <div>
-    <home-header></home-header>
-    <!-- <nav-bar>
-      <div slot="center"><input type="text" value="请输入城市"/></div>
-      <div slot="right">
-        <router-link to="/city">
-          <div class="header-right">
-            宁波
-            <span class="iconfont arrow-icon">&#xe62d;</span>
-          </div>
+    <common-scroll
+      class="content-top"
+      eventPassthrough="horizontal"
+    >
+      <home-header></home-header>
+      <!-- <nav-bar>
+        <div slot="center"><input type="text" value="请输入城市"/></div>
+        <div slot="right">
+          <router-link to="/city">
+            <div class="header-right">
+              宁波
+              <span class="iconfont arrow-icon">&#xe62d;</span>
+            </div>
+          </router-link>
+        </div>
+      </nav-bar> -->
+      <home-swiper :swiperList="swiperList"></home-swiper>
+      <cate-title title="本周热门榜单" >
+        <span slot="icon" class="iconfont iconremen"></span>
+        <router-link tag="div" slot="right" to="/hotlist">全部榜单
+          <span class="iconfont">&#xe628;</span>
         </router-link>
-      </div>
-    </nav-bar> -->
-    <home-swiper :swiperList="swiperList"></home-swiper>
-    <cate-title title="本周热门榜单" >
-      <span slot="icon" class="iconfont iconremen"></span>
-      <router-link tag="div" slot="right" to="/hotlist">全部榜单
-        <span class="iconfont">&#xe628;</span>
-      </router-link>
-    </cate-title>
-    <hot-list :hotList="this.list.hotList" ></hot-list>
-    <!-- <home-icons :iconList="iconList"></home-icons> -->
-    <!-- 这里传入的颜色怎么样才能使用stylus变量呢 bgcolor="$tabbarBackcolor"... -->
-    <cate-title title="热销推荐" bgcolor="#eee"></cate-title>
-    <home-recommend :recommendList="recommendList"></home-recommend>
-    <cate-title title="周末去哪儿" bgcolor="#eee"></cate-title>
-    <home-weekend :weekendList="weekendList"></home-weekend>
+      </cate-title>
+      <hot-list :hotList="this.list.hotList" ></hot-list>
+      <!-- <home-icons :iconList="iconList"></home-icons> -->
+      <!-- 这里传入的颜色怎么样才能使用stylus变量呢 bgcolor="$tabbarBackcolor"... -->
+      <cate-title title="热销推荐" bgcolor="#eee"></cate-title>
+      <home-recommend :recommendList="recommendList"></home-recommend>
+      <cate-title title="周末去哪儿" bgcolor="#eee"></cate-title>
+      <home-weekend :weekendList="weekendList"></home-weekend>
+    </common-scroll>  
   </div>
 </template>
 <script>
@@ -40,6 +45,7 @@ import {getHomeData} from '../../network/home'
 import { mapState } from 'vuex'
 import NavBar from 'common/navbar/NavBar.vue'
 import CateTitle from './components/CateTitle.vue'
+import CommonScroll from 'common/scroll/Scroll.vue'
 
 export default {
   name: 'Home',
@@ -51,7 +57,8 @@ export default {
     HomeWeekend,
     NavBar,
     HotList,
-    CateTitle
+    CateTitle,
+    CommonScroll
   },
   data () {
     return {
@@ -101,6 +108,7 @@ export default {
     }
   },
   mounted () {
+    console.log("home mounted");
     this.getHomeInfo()
     this.lastCity = this.city
   },

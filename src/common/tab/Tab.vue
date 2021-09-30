@@ -1,8 +1,10 @@
 <template>
   <div>
+
     <ul class="tab border-bottom">
       <slot></slot>
     </ul>
+
   </div>
 </template>
 <script>

@@ -12,7 +12,7 @@
 </template>
 
 <script>
-
+import Bus from '@/main.js'
 export default {
   name: 'fade',
   props:{
@@ -27,8 +27,10 @@ export default {
     }
   },
   methods: {
-    handleScroll () {
-      const top = document.documentElement.scrollTop
+    handleScroll (position) {
+      
+      const top = 0- position.y
+      // console.log(top);
       if (top > 60) {
         this.showHeader = true
         this.opacityStyle.opacity = top / 200 > 1 ? 1 : top / 200
@@ -37,19 +39,32 @@ export default {
       }
     }
   },
-  activated () {
-    window.addEventListener('scroll', this.handleScroll)
+  created (){
+    // console.log("fade mounted");
+    
+    // window.addEventListener('scroll', this.handleScroll)
   },
-  deactivated () {
+  mounted () {
+    Bus.$on("scroll",this.handleScroll) 
+  },
+  destoryed (){
+    console.log("fade destoryed");
     window.removeEventListener('scroll', this.handleScroll)
-  }
+    // window.removeEventListener('scroll', this.handleScroll)
+  },
+  // activated () {
+  //   window.addEventListener('scroll', this.handleScroll)
+  // },
+  // deactivated () {
+  //   window.removeEventListener('scroll', this.handleScroll)
+  // }
 }
 </script>
 
 <style lang="stylus" scoped>
   .header-fix-back
     position: fixed
-    z-index: 2
+    z-index: 10
     top: 0
     left: 0
     width: 100%

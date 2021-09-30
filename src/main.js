@@ -18,6 +18,8 @@ Vue.config.productionTip = false
 fastClick.attach(document.body)
 Vue.use(VueAwesomeSwiper)
 Vue.prototype.baseURL = process.env.API_ROOT
+const Bus = new Vue()
+export default Bus 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
