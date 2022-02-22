@@ -154,7 +154,11 @@ export default {
         length ++;
       }
       
-    }
+    },
+    beforeDestroy(){
+      // window.removeEventListener("scroll")
+      // Bus.$off('scroll')
+    },
   }
 }
 </script>

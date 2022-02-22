@@ -1,11 +1,16 @@
 <template>
   <div class="detail-main">
     <fade title="景点详情"></fade>
-    <detail-banner :bannerImg="bannerImg" :gallaryImgs="gallaryImgs" :sightName="sightName"></detail-banner>
-    <detail-score class="sc" :scoreContent="scoreContent"></detail-score>
-    <!-- <detail-header></detail-header> -->
-    <detail-container :mpContent="mpContent"></detail-container>
-    <detail-comment></detail-comment>
+    <common-scroll 
+      class="content-top"
+      :probeType="3"
+    >
+      <detail-banner :bannerImg="bannerImg" :gallaryImgs="gallaryImgs" :sightName="sightName"></detail-banner>
+      <detail-score class="sc" :scoreContent="scoreContent"></detail-score>
+      <!-- <detail-header></detail-header> -->
+      <detail-container :mpContent="mpContent"></detail-container>
+      <detail-comment></detail-comment>
+    </common-scroll>
   </div>
 </template>
 
@@ -17,6 +22,7 @@ import DetailContainer from './components/Container'
 import DetailComment from './components/Comment'
 import axios from 'axios'
 import Fade from '../../common/fade/Fade.vue'
+import CommonScroll from 'common/scroll/Scroll.vue'
 export default {
   name: 'Detail',
   components: {
@@ -25,7 +31,8 @@ export default {
     DetailScore,
     DetailContainer,
     DetailComment,
-    Fade
+    Fade,
+    CommonScroll
   },
   data () {
     return {

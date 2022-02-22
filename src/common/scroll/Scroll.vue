@@ -37,7 +37,11 @@ export default {
     this.scroll.on("scroll",(position)=>{
       Bus.$emit('scroll',position)
     })
-  }
+  },
+  beforeDestroy(){
+    this.scroll.off("scroll")
+    // Bus.$off('scroll')
+  },
 }
 </script>
 <style lang="stylus" scoped>

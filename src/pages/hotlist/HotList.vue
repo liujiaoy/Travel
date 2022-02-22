@@ -169,6 +169,7 @@ export default {
     },
     //
     switchTabActive(scrolltop){
+
       let tabContent = document.getElementsByClassName('tab-content');
       let addrTop  =  tabContent[1].offsetTop;
       // console.log(addrTop);
