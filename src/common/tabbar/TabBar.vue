@@ -24,7 +24,7 @@ export default {
   background-color: $tabbarBackcolor
   height: 49px
   flex-flow: row nowrap
-  justify-content:  space-between
+  justify-content:  space-around
   align-items: center
   z-index: 2
 .tabbardiv

@@ -1,7 +1,7 @@
 <template>
   <div>
      <nav-bar>
-      <div slot="center">照片墙</div>
+      <div slot="center">游记</div>
     </nav-bar>
     <waterfall 
       :mainMenuList="mainMenuList"
